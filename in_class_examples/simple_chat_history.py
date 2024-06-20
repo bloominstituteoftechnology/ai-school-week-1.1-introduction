@@ -13,7 +13,7 @@ messages = [
 
 result = chat.invoke(messages).content
 
-messages.append(result)
+messages.append(AIMessage(content=result))
 print(messages)
 
 # Continue the conversation
@@ -25,5 +25,5 @@ while True:
 
     result = chat.invoke(messages).content
 
-    messages.append(result)
+    messages.append(AIMessage(content=result))
     print(messages)
